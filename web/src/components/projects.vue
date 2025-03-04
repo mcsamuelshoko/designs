@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import Project from "./project.vue";
+
 </script>
 
 <template>
@@ -18,7 +20,7 @@
             <li class="border-b">
                 <a href="">
                     <div class="grid grid-cols-3 items-center h-12">
-                        <p class="pl-8">Name|Kaiya Stanton</p>
+                        <p class="pl-8">I -- Name|Kaiya Stanton</p>
                         <p class="pl-8">Description|Press</p>
                         <p class="pl-8">Date|2025</p>
                     </div>
@@ -27,7 +29,7 @@
             <li class="border-b">
                 <a href="">
                     <div class="grid grid-cols-3 items-center h-12">
-                        <p class="pl-8">Name|Kaiya Stanton</p>
+                        <p class="pl-8">II -- Name|Kaiya Stanton</p>
                         <p class="pl-8">Description|Press</p>
                         <p class="pl-8">Date|2025 <span class="ml-[50%]">&plus;</span> </p>
                     </div>
@@ -36,7 +38,7 @@
             <li class="border-b">
                 <a href="">
                     <div class="grid grid-cols-3 items-center h-12">
-                        <p class="pl-8">Name|Kaiya Stanton</p>
+                        <p class="pl-8">III -- Name|Kaiya Stanton</p>
                         <p class="pl-8">Description|Press</p>
                         <p class="pl-8">Date|2025</p>
                     </div>
@@ -45,11 +47,14 @@
             <li class="border-b">
                 <a href="">
                     <div class="grid grid-cols-3 items-center h-12">
-                        <p class="pl-8">Name|Kaiya Stanton</p>
+                        <p class="pl-8">IV -- Name|Kaiya Stanton</p>
                         <p class="pl-8">Description|Press</p>
                         <p class="pl-8">Date|2025</p>
                     </div>
                 </a>
+            </li>
+            <li class="border-b">
+                <Project />
             </li>
         </ul>
     </section>
