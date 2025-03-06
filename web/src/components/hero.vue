@@ -2,27 +2,27 @@
 </style>
 
 <template>
-    <section id="heroLg" class="hidden md:block">
-        <div class="h-[25vh] border-b-gray-50 flex justify-between">
-            <p class="capitalize text-8xl">Mc Samuel</p>
-            <p class="capitalize">Brand Design</p>
+    <section id="heroLg" class="hidden md:block font-display">
+        <div class="h-[25vh] border-b flex justify-between p-8">
+            <p class="capitalize text-8xl font-bold items-center ">Mc Samuel</p>
+            <p class="capitalize text-3xl">Brand Design</p>
         </div>
-        <div class="h-[25vh] border-b-gray-50 flex justify-between">
-            <p class="">UI/UX Design</p>
-            <p class="capitalize">Eeb Design</p>
-            <p class="capitalize text-8xl">Shoko</p>
+        <div class="h-[25vh] border-b flex justify-between p-8">
+            <p class=" text-3xl">UI/UX Design</p>
+            <p class="capitalize text-3xl">Web Design</p>
+            <p class="capitalize text-8xl font-bold  flex items-center ">Shoko</p>
         </div>
-        <div class="h-[25vh] border-b-gray-50 flex justify-between">
-            <p class="capitalize text-8xl">Digital</p>
-            <p class="capitalize">Logo Identity</p>
+        <div class="h-[25vh] border-b flex justify-between p-8">
+            <p class="capitalize text-8xl font-bold items-center">Digital</p>
+            <p class="capitalize text-3xl">Logo Identity</p>
         </div>
-        <div class="h-[25vh] border-b-gray-50 flex justify-between">
+        <div class="h-[25vh] border-b flex justify-between p-8">
             <div>
                 img:s*3
             </div>
-            <p class="capitalize text-8xl">Designer</p>
+            <p class="capitalize text-8xl font-bold items-center">Designer</p>
         </div>
-        <div class="h-[25vh] border-b-gray-50 flex justify-between"></div>
+        <div class="h-[25vh] border-b flex justify-between p-8"></div>
     </section>
     <section id="heroSm" class="md:hidden">
             for small screens
