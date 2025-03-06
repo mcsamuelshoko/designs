@@ -31,8 +31,8 @@ export default {
 
 <template>
     <header :class="stickyClass" class=" transition-all fixed top-0 left-0 w-full shadow z-50">
-        <nav class="border-b h-12 bg-primary1C text-white capitalize flex items-center font-display">
-            <ul class="flex-1 flex justify-between px-8 text-2xl">
+        <nav class="border-b h-12 bg-primary/70 backdrop-blur-md text-white capitalize flex items-center font-display">
+            <ul class="flex-1 flex justify-between px-8 md:text-2xl">
                 <li class="capitalize">
                     <a :class="linkStyling" href="/">Mc Samuel Shoko</a>
                 </li>
