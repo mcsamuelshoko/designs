@@ -42,68 +42,6 @@ const toggle = (index: number) => {
     activeIndex.value = activeIndex.value === index ? null : index;
 };
 
-// #################################################################################################
-// #################################################################################################
-
-// Define the slides (can be dynamic or fetched from an API)
-const slides = ref([
-    {
-        image: "https://images.pexels.com/photos/1799901/pexels-photo-1799901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        alt: 'Slide 1',
-        caption: 'Welcome to Slide 1'
-    },
-    {
-        image: "https://images.pexels.com/photos/1532704/pexels-photo-1532704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        alt: 'Slide 2',
-        caption: 'This is Slide 2'
-    },
-    {
-        image: "https://images.pexels.com/photos/1840625/pexels-photo-1840625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-        ,
-        alt: 'Slide 3',
-        caption: 'And here is Slide 3'
-    }
-]);
-
-// Reactive property for the current slide
-const currentSlide = ref(0);
-
-// Function to go to the next slide
-function nextSlide() {
-    currentSlide.value = (currentSlide.value + 1) % slides.value.length;
-}
-
-// Function to go to the previous slide
-function prevSlide() {
-    currentSlide.value = (currentSlide.value - 1 + slides.value.length) % slides.value.length;
-}
-
-// Function to go to a specific slide
-function goToSlide(index: number) {
-    currentSlide.value = index;
-}
-
-// Slide transition styles (calculates the transform for sliding effect)
-function getSlideStyle(index: number) {
-    const offset = currentSlide.value - index;
-    const translateX = offset * 100; // Move the slides horizontally
-    return {
-        transform: `translateX(${translateX}%)`,
-    };
-}
-
-// Automatic slide change every 3 seconds
-let slideInterval: number;
-onMounted(() => {
-    slideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
-});
-
-onBeforeUnmount(() => {
-    clearInterval(slideInterval); // Clear the interval when the component is destroyed
-});
-// ###################################################################################################
-// ###################################################################################################
-
 </script>
 
 <style scoped>
@@ -118,28 +56,6 @@ onBeforeUnmount(() => {
 }
 </style>
 
-<style scoped>
-/* Add transition for sliding effect */
-.relative>.absolute {
-    transition: transform 0.7s ease-in-out;
-    /* Smooth sliding animation */
-}
-
-/* Customize the carousel dots and buttons */
-.accordion-item {
-    margin-bottom: 1rem;
-}
-
-.accordion-content {
-    padding: 10px;
-    background-color: #f0f0f0;
-    display: none;
-}
-
-.accordion-item h3:hover+.accordion-content {
-    display: block;
-}
-</style>
 
 <template>
     <section id="work" class="border-b pt-8">
@@ -200,41 +116,7 @@ onBeforeUnmount(() => {
                             <Button title="Visit" target="blank" :url="project.openUrl" />
                         </div>
                     </div>
-                    <section id="carouselH">
-                        <div class="relative w-full max-w-3xl mx-auto">
-                            <!-- Carousel Slides -->
-                            <div class="relative overflow-hidden">
-                                <div v-for="(slide, index) in slides" :key="index"
-                                    class="absolute inset-0 transition-all duration-700 ease-in-out"
-                                    :style="getSlideStyle(index)">
-                                    <img :src="slide.image" :alt="slide.alt"
-                                        class="w-full h-auto object-cover rounded-lg shadow-lg" />
-                                    <div class="absolute bottom-4 left-4 text-white font-bold text-xl">
-                                        {{ slide.caption }}
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- Buttons -->
-                            <div class="absolute top-1/2 left-4 transform -translate-y-1/2">
-                                <button @click="prevSlide" class="p-2 bg-black bg-opacity-50 text-white rounded-full">
-                                    &#10094;
-                                </button>
-                            </div>
-                            <div class="absolute top-1/2 right-4 transform -translate-y-1/2">
-                                <button @click="nextSlide" class="p-2 bg-black bg-opacity-50 text-white rounded-full">
-                                    &#10095;
-                                </button>
-                            </div>
-
-                            <!-- Dot Navigation -->
-                            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                                <button v-for="(slide, index) in slides" :key="index"
-                                    :class="{ 'bg-white': currentSlide === index, 'bg-gray-400': currentSlide !== index }"
-                                    @click="goToSlide(index)" class="w-3 h-3 rounded-full"></button>
-                            </div>
-                        </div>
-                    </section>
                 </div>
             </div>
         </div>
