@@ -1,16 +1,28 @@
 <script lang="ts" setup>
+import type { Project } from '../types/project-types';
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 const emailIconUrl:string  = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3C!-- Icon from Carbon by IBM - undefined --%3E%3Cpath fill='currentColor' d='M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2m-2.2 2L16 14.78L6.2 8ZM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24Z'/%3E%3C/svg%3E";
 const dArrowIconUrl: string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3C!-- Icon from Carbon by IBM - undefined --%3E%3Cpath fill='currentColor' d='M24.59 16.59L17 24.17V4h-2v20.17l-7.59-7.58L6 18l10 10l10-10z'/%3E%3C/svg%3E";
 
 
-const images = ref([
-  'https://images.pexels.com/photos/1799912/pexels-photo-1799912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=1000&dpr=2',
-  'https://images.pexels.com/photos/1840625/pexels-photo-1840625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=1000&dpr=2',
-  'https://images.pexels.com/photos/1532704/pexels-photo-1532704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=1000&dpr=2',
-  'https://images.pexels.com/photos/1799912/pexels-photo-1799912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=1000&dpr=2',
-]);
+
+const images = ref<string[]>([]);
+
+onMounted(async () => {
+    const response = await fetch('/data/projects.json');
+    const data = await response.json();
+    const projects:Project[] = data;
+    const tempImages:string[] = [];
+
+    projects.forEach( project => {
+      tempImages.push(project.bannerUrl);
+      project.images.forEach(pImage => tempImages.push(pImage.image));
+    })
+
+    images.value = tempImages;
+
+});
 
 const currentSlide = ref(0);
 
