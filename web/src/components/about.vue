@@ -58,7 +58,7 @@ const wordClass = (index: number) => {
             <!-- <div class="hidden md:block">
 
             </div> -->
-            <div class="md:col-span-3  border-x overflow-hidden">
+            <div class="md:col-span-3  md:border-r overflow-hidden">
 
                 <ul :class="wordClass(4)" class='flex space-x-2 justify-center items-center animate-[wiggle_15s_infinite] text-7xl font-marker'>
                     <!-- Loop through the items and display each one -->
