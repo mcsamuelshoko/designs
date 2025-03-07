@@ -22,6 +22,37 @@
     --font-marker: "Permanent Marker", "sans-serif";
 }
 
+@theme {
+    --animate-wiggle: wiggle 1s ease-in-out infinite;
+
+    @keyframes wiggle {
+
+        0%,
+        100% {
+            transform: rotate(-3deg);
+        }
+
+        50% {
+            transform: rotate(3deg);
+        }
+    }
+
+    --animate-infiniteScroll: infiniteScroll 25s linear infinite,
+
+
+    @keyframes infiniteScroll {
+
+        from {
+            transform: 'translateX(0)'
+        }
+
+        to {
+            transform: 'translateX(-100%)'
+        }
+    }
+}
+
+
 body {
     scroll-behavior: smooth;
 }
