@@ -4,6 +4,8 @@ import * as z from "zod";
 
 import Playground from './playground.vue';
 import Button from './button.vue'
+import Carousel from './carousel.vue';
+import CarouselH from './carouselH.vue';
 
 
 const dArrowIconUrl: string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3C!-- Icon from Carbon by IBM - undefined --%3E%3Cpath fill='currentColor' d='M24.59 16.59L17 24.17V4h-2v20.17l-7.59-7.58L6 18l10 10l10-10z'/%3E%3C/svg%3E";
@@ -89,21 +91,11 @@ const toggle = (index: number) => {
                         </div>
                     </div>
                 </button>
-                <div v-show="activeIndex === index" class="accordion-body p-4">
+                <div v-show="activeIndex === index" class="accordion-body px-2">
                     <div class=" bg-primary1C grid grid-cols-1 md:grid-cols-12 transition-all duration-300">
                         <div class="md:col-span-8 w-full bg-primary1B/50 p-8">
                             <div class="w-full">
-                                <img src="https://images.pexels.com/photos/804269/pexels-photo-804269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                    alt="carousel" class="w-full max-h-[47vh] object-cover">
-                                <div class="flex justify-end">
-                                    <ul class="flex space-x-1 pt-2">
-                                        <li>&ofcir;</li>
-                                        <li>&cir;</li>
-                                        <li>&cir;</li>
-                                        <li>&cir;</li>
-                                        <li>&cir;</li>
-                                    </ul>
-                                </div>
+                                <Carousel />
                             </div>
                         </div>
                         <div class="md:col-span-4 p-8">
@@ -113,11 +105,18 @@ const toggle = (index: number) => {
                             <br>
                             <p class=" text-2xl opacity-50">{{ project.description }}</p>
                             <br>
-                            <Button title="Visit" target="blank" :url="project.openUrl" />
+                            <div class="flex flex-wrap  space-y-4 space-x-8">
+                                <Button title="visit" target="blank" :url="project.openUrl" />
+                                <!-- <Button title="expand"  :url="project.openUrl" /> -->
+                            </div>
                         </div>
                     </div>
+                    <!-- <section class="p-8 bg-blue-50 h-screen flex item-center justify-center">
+                        <CarouselH />
+                    </section> -->
 
                 </div>
+
             </div>
         </div>
         <div class="border-b">
