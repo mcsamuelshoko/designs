@@ -1,0 +1,19 @@
+[
+    {
+        "id": "theOne",
+        "name": "the one",
+        "category":"branding",
+        "tags":["branding","logo","brand identity","agency"],
+        "description": "A product branding from scratch for a design agency",
+        "moreUrl": "/the-one",
+        "openUrl":"https://www.makistudio.online/",
+        "date": "13-12-2024",
+        "bannerUrl": "https://images.pexels.com/photos/1799912/pexels-photo-1799912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "imageUrls": [
+            "https://images.pexels.com/photos/1799901/pexels-photo-1799901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/1532704/pexels-photo-1532704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "https://images.pexels.com/photos/1840625/pexels-photo-1840625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+
+        ]
+    }
+]
