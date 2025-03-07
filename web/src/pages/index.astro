@@ -1,22 +1,25 @@
 ---
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/header.vue";
+import Hero from "../components/hero.vue";
+import About from "../components/about.vue";
+import Contact from "../components/contact.vue"
+import Projects from "../components/projects.vue"
+import Footer from "../components/footer.vue";
 import "../styles/global.css";
-
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<div class="container flex border-y border-gray-100 bg-green-100 rounded m-8">
-		<h1
-			class="text-3xl text-green-600 font-bold font-mono p-8 flex-inline justify-center"
-		>
-			🔥TESTING FOR — SUCCESSFUL DEPLOYMENT PIPELINE | FOR PORTFOLIO TO BE
-		</h1>
-		feeeling laaaaaaaaaaaazy today hehe
-		and again, strike 2
-	</div>
+	<Header  client:load />
+	<Hero client:load />
+	<About client:load />
+	<Contact client:load />
+	<Projects client:load />
+	<div class="h-40">
 
-	<Welcome />
+	</div>
+	<Footer client:load />
 </Layout>
