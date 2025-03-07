@@ -74,9 +74,9 @@ onBeforeUnmount(() => {
             <img
             :src="slide.image"
             :alt="slide.alt"
-            class=" object-contain rounded-lg shadow-lg"
+            class=" object-contain  w-full h-[83vh]"
             />
-            <div class="absolute bottom-4 left-4 text-white font-bold text-xl">
+            <div class="absolute bottom-40 -left-28 text-white/50 font-mono font-bold uppercase -rotate-90 ">
             {{ slide.caption }}
             </div>
         </div>
