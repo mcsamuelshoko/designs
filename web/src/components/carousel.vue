@@ -1,14 +1,6 @@
 <script lang="ts" setup>
-
-import * as z from "zod";
 import { onBeforeUnmount, onMounted, ref } from 'vue';
-
-const ImageSchema = z.object({
-    "image": z.string(),
-    "alt": z.string(),
-    "caption": z.string(),
-});
-type Image = z.infer<typeof ImageSchema>;
+import type { Image } from '../types/project-types';
 
 const { slideImages } = defineProps<{
     slideImages: Image[],

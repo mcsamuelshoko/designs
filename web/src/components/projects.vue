@@ -1,31 +1,15 @@
 <script lang="ts" setup>
 import { onMounted, ref, onBeforeUnmount } from 'vue';
-import * as z from "zod";
 
-import Playground from './playground.vue';
+// import Playground from './playground.vue';
 import Button from './button.vue'
 import Carousel from './carousel.vue';
-import CarouselH from './carouselH.vue';
+// import CarouselH from './carouselH.vue';
+import type { Project } from '../types/project-types';
 
 
 const dArrowIconUrl: string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3C!-- Icon from Carbon by IBM - undefined --%3E%3Cpath fill='currentColor' d='M24.59 16.59L17 24.17V4h-2v20.17l-7.59-7.58L6 18l10 10l10-10z'/%3E%3C/svg%3E";
 const plusLIconUrl: string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3C!-- Icon from Carbon by IBM - undefined --%3E%3Cpath fill='currentColor' d='M17 15V5h-2v10H5v2h10v10h2V17h10v-2z'/%3E%3C/svg%3E";
-
-
-const ProjectSchema = z.object({
-    "id": z.string(),
-    "name": z.string(),
-    "category": z.string(),
-    "tags": z.array(z.string()),
-    "description": z.string(),
-    "moreUrl": z.string(),
-    "openUrl": z.string(),
-    "date": z.string(),
-    "bannerUrl": z.string(),
-    "imageUrls": z.array(z.string()),
-});
-type Project = z.infer<typeof ProjectSchema>;
-
 
 
 // Define the data for the accordion items
@@ -95,7 +79,7 @@ const toggle = (index: number) => {
                     <div class=" bg-primary1C grid grid-cols-1 md:grid-cols-12 transition-all duration-300">
                         <div class="md:col-span-8 w-full bg-primary1B/50 p-8">
                             <div class="w-full">
-                                <Carousel />
+                                <Carousel :slide-images="project.images" />
                             </div>
                         </div>
                         <div class="md:col-span-4 p-8">
@@ -119,8 +103,8 @@ const toggle = (index: number) => {
 
             </div>
         </div>
-        <div class="border-b">
+        <!-- <div class="border-b">
             <Playground />
-        </div>
+        </div> -->
     </section>
 </template>
