@@ -7,9 +7,14 @@ import Carousel from './carousel.vue';
 // import CarouselH from './carouselH.vue';
 import type { Project } from '../types/project-types';
 
+const { baseUrl,} = defineProps<{
+    baseUrl: string,
+}>();
+
 
 const dArrowIconUrl: string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3C!-- Icon from Carbon by IBM - undefined --%3E%3Cpath fill='currentColor' d='M24.59 16.59L17 24.17V4h-2v20.17l-7.59-7.58L6 18l10 10l10-10z'/%3E%3C/svg%3E";
 const plusLIconUrl: string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3C!-- Icon from Carbon by IBM - undefined --%3E%3Cpath fill='currentColor' d='M17 15V5h-2v10H5v2h10v10h2V17h10v-2z'/%3E%3C/svg%3E";
+const subtractLIconUrl: string ="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3C!-- Icon from Carbon by IBM - undefined --%3E%3Cpath fill='currentColor' d='M5 15v2h22v-2z'/%3E%3C/svg%3E";
 
 
 // Define the data for the accordion items
@@ -22,10 +27,21 @@ onMounted(async () => {
 });
 // State to track the active index
 const activeIndex = ref<number | null>(null);
+// State to track the icon for each accordion item
+const icons = ref<string[]>(new Array(projects.value.length).fill(plusLIconUrl));
 
-// Function to toggle the accordion content
+// Function to toggle the accordion content and update the icon
 const toggle = (index: number) => {
-    activeIndex.value = activeIndex.value === index ? null : index;
+    if (activeIndex.value === index) {
+        // Close the accordion and reset the icon to the plus
+        activeIndex.value = null;
+        icons.value[index] = plusLIconUrl;
+    } else {
+        // Open the accordion and change the icon to the subtract
+        activeIndex.value = index;
+        icons.value[index] = subtractLIconUrl;
+    }
+
 };
 
 </script>
@@ -70,7 +86,8 @@ const toggle = (index: number) => {
                         <div class="flex">
                             <p class="pl-8">{{ project.date.split('-')[2] }} </p>
                             <div class="ml-[30%] ">
-                                <img :src="plusLIconUrl" alt="LinkedIn-icon" class="h-8 hover:invert transition-all">
+                                <!-- Bind the icon dynamically based on the toggle state -->
+                                <img :src="icons[index]??plusLIconUrl" alt="accordion-toggle-icon" class="h-8 transition-all">
                             </div>
                         </div>
                     </div>
@@ -79,13 +96,13 @@ const toggle = (index: number) => {
                     <div class=" bg-primary1C grid grid-cols-1 md:grid-cols-12 transition-all duration-300">
                         <div class="md:col-span-8 w-full bg-primary1B/50 p-8">
                             <div class="w-full">
-                                <Carousel :slide-images="project.images" />
+                                <Carousel :slide-images="project.images" :base-url="baseUrl" />
                             </div>
                         </div>
                         <div class="md:col-span-4 p-8">
                             <p class=" text-2xl capitalize"> <span v-for="(tag, tIndex) in project.tags"
                                     :key="tIndex">{{ tag }}
-                                    <span v-if="(project.tags.length - 1) != tIndex">&mdash; </span> </span></p>
+                                    <span v-if="(project.tags.length - 1) != tIndex" class="opacity-50">&mdash; </span> </span></p>
                             <br>
                             <p class=" text-2xl opacity-50">{{ project.description }}</p>
                             <br>
@@ -106,5 +123,23 @@ const toggle = (index: number) => {
         <!-- <div class="border-b">
             <Playground />
         </div> -->
+    </section>
+    <section id="workBottom" class="border-b">
+        <ul class="uppercase font-bold grid grid-cols-3 font-display text-2xl  pb-16">
+            <li class="border-r h-16 flex flex-col items-start justify-end px-8">Name</li>
+            <li class="border-r h-16 flex flex-col justify-end px-8">Category</li>
+            <li class=" h-16 flex flex-col justify-end px-8">Date</li>
+        </ul>
+        <div class="text-8xl p-8 flex space-x-8 lg:space-x-16 font-bold">
+            <p class="opacity-0">See my work</p>
+            <div>
+                <img :src="dArrowIconUrl" alt="right arrow-icon" class="h-24 bg-[#ffa800] invert rotate-180" />
+            </div>
+        </div>
+        <ul class="uppercase font-bold grid grid-cols-3 font-display text-2xl">
+            <li class="border-r h-16 flex flex-col justify-end px-8"><p class="opacity-0">Name</p></li>
+            <li class="border-r h-16 flex flex-col justify-end px-8"><p class="opacity-0">Category</p></li>
+            <li class=" h-16 flex flex-col justify-end px-8"><p class="opacity-0">Date</p></li>
+        </ul>
     </section>
 </template>
