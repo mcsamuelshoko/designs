@@ -6,6 +6,7 @@ import Button from './button.vue'
 import Carousel from './carousel.vue';
 // import CarouselH from './carouselH.vue';
 import type { Project } from '../types/project-types';
+import { updateWithBaseUrl } from '../shared/shared-functions';
 
 const { baseUrl,} = defineProps<{
     baseUrl: string,
@@ -21,7 +22,7 @@ const subtractLIconUrl: string ="data:image/svg+xml,%3Csvg xmlns='http://www.w3.
 const projects = ref<Project[]>([]);
 
 onMounted(async () => {
-    const response = await fetch('/data/projects.json');
+    const response = await fetch(updateWithBaseUrl('/data/projects.json',baseUrl));
     const data = await response.json();
     projects.value = data;
 });

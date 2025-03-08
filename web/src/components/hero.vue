@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { BASE_URL } from '../shared/shared-constants';
+import { updateWithBaseUrl } from '../shared/shared-functions';
 import type { Project } from '../types/project-types';
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
@@ -10,7 +12,7 @@ const dArrowIconUrl: string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.or
 const images = ref<string[]>([]);
 
 onMounted(async () => {
-    const response = await fetch('/data/projects.json');
+    const response = await fetch(updateWithBaseUrl('/data/projects.json',BASE_URL.href));
     const data = await response.json();
     const projects:Project[] = data;
     const tempImages:string[] = [];
