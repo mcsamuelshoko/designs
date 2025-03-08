@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 import type { Image } from '../types/project-types';
+import { updateWithBaseUrl } from '../shared/shared-functions';
 
-const { slideImages } = defineProps<{
+const { slideImages, baseUrl } = defineProps<{
     slideImages: Image[],
+    baseUrl: string
 }>()
 
 // Define the slides (can be dynamic or fetched from an API)
@@ -46,7 +48,7 @@ onBeforeUnmount(() => {
         <div class="relative">
             <div v-for="(slide, index) in slides" :key="index" class="absolute top-0 left-0 w-full duration-300"
                 :class="{ 'opacity-100': currentSlide === index, 'opacity-0': currentSlide !== index }">
-                <img :src="slide.image" :alt="slide.alt" class=" object-contain  w-full h-[83vh]" />
+                <img :src="updateWithBaseUrl(slide.image,baseUrl)" :alt="slide.alt" class=" object-contain  w-full h-[83vh]" />
                 <div class="absolute bottom-40 -left-24 text-white/50 font-mono font-medium uppercase -rotate-90 ">
                     {{ slide.caption }}
                 </div>

@@ -1,6 +1,11 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
 
+const { baseUrl,} = defineProps<{
+    baseUrl: string,
+}>();
+
+
 const currentWordIndex = ref(0);
 
 // Function to cycle through the words every 2 seconds
@@ -17,11 +22,11 @@ const wordClass = (index: number) => {
 </script>
 
 <template>
-    <section id="bio" class="border-b">
+    <section id="about" class="border-b">
         <div class="border-x border-dashed md:mx-40 px-8 flex items-center  h-[75vh]">
             <p class="text-6xl font-display p-8">
                 I take <span class="text-accent">ideas</span> and draw them with clear shapes and smart designs. <span
-                    class="inline-flex relative top-4 animate-[ping_7s_infinite]"><img src="/icons/star.svg"
+                    class="inline-flex relative top-4 animate-[ping_7s_infinite]"><img :src="`${baseUrl}/icons/star.svg`"
                         alt="star shape" class="h-16 -mb-4 animate-[spin_7s_infinite]  ease-in" /></span>
             </p>
         </div>
@@ -42,16 +47,16 @@ const wordClass = (index: number) => {
         </div>
         <div class="border-b grid grid-cols-2 md:grid-cols-4">
             <div class="flex justify-center items-center border-r border-b md:border-b-0">
-                <img :class="wordClass(0)" src="/icons/websites-form.svg" alt="star shape" class="h-64 p-8 ease-in " />
+                <img :class="wordClass(0)" :src="`${baseUrl}/icons/websites-form.svg`" alt="star shape" class="h-64 p-8 ease-in " />
             </div>
             <div class="flex justify-center items-center md:border-r border-b md:border-b-0">
-                <img :class="wordClass(1)" src="/icons/apps-form.svg" alt="star shape" class="h-64 p-8 ease-in " />
+                <img :class="wordClass(1)" :src="`${baseUrl}/icons/apps-form.svg`" alt="star shape" class="h-64 p-8 ease-in " />
             </div>
             <div class="flex justify-center items-center border-r">
-                <img :class="wordClass(2)" src="/icons/branding-form.svg" alt="star shape" class="h-64 p-8 ease-in " />
+                <img :class="wordClass(2)" :src="`${baseUrl}/icons/branding-form.svg`" alt="star shape" class="h-64 p-8 ease-in " />
             </div>
             <div class="flex justify-center items-center">
-                <img :class="wordClass(3)" src="/icons/logo-form.svg" alt="star shape" class="h-64 p-8 ease-in " />
+                <img :class="wordClass(3)" :src="`${baseUrl}/icons/logo-form.svg`" alt="star shape" class="h-64 p-8 ease-in " />
             </div>
         </div>
         <div class="border-b grid grid-cols-1 md:grid-cols-4 h-16">

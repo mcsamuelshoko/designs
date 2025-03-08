@@ -4,7 +4,7 @@ const { title, url, target } = defineProps<{
     title: string,
     url: string,
     target?: "blank" | "self",
-}>()
+}>();
 
 const openTarget = (s: "blank" | "self" | undefined) => (s == "blank" ? "_blank" : "_self");
 
