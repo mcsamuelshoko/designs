@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+const { baseUrl,} = defineProps<{
+    baseUrl: string,
+}>();
+
 const currentYear = new Date().getFullYear();
 </script>
 
@@ -6,7 +10,7 @@ const currentYear = new Date().getFullYear();
     <footer class="border-t">
         <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 border-b bg-accent lg:min-h-[40vh]">
             <div class="bg-primary md:bg-transparent flex align-center justify-center items-center md:border-r md:border-dashed border-white">
-                <img src="/favicon.svg" class="h-36" alt="sub-mark logo">
+                <img :src="`${baseUrl}/favicon.svg`" class="h-36" alt="sub-mark logo">
                 <!-- <SubMark class="h-6 bg-gree-500" /> -->
             </div>
             <div class="flex flex-col">
