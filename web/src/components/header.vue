@@ -34,7 +34,7 @@ export default {
         <nav class="border-b h-12 bg-primary/70 backdrop-blur-md text-white capitalize flex items-center font-display">
             <ul class="flex-1 flex justify-between px-8 md:text-2xl">
                 <li class="capitalize">
-                    <a :class="linkStyling" href="/">Mc Samuel Shoko</a>
+                    <a :class="linkStyling" href="#">Mc Samuel Shoko</a>
                 </li>
                 <li>
                     <a :class="linkStyling" href="#work">work</a>
