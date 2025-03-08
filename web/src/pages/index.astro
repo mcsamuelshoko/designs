@@ -11,6 +11,7 @@ import "../styles/global.css";
 
 import { Image } from 'astro:assets';
 import localPotraitImage from '../images/maki-portrait.png';
+import { BASE_URL } from "../shared/shared-constants";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 
@@ -19,9 +20,7 @@ const thumbsUpIconUrl= "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/
 // const portraitImageLink = "https://github.com/mcsamuelshoko/readme/blob/main/src/images/freelancer-profile.png?raw=true";
 
 // const baseUrl = Astro.site;
-const baseUrl = new URL(
-	"https://mcsamuelshoko.github.io/designs",
-);
+const baseUrl = BASE_URL;
 ---
 
 <Layout>
@@ -57,5 +56,5 @@ const baseUrl = new URL(
 			</p>
 		</div>
 	</div>
-	<Footer client:load />
+	<Footer baseUrl={baseUrl?.href ?? ""} client:load />
 </Layout>
