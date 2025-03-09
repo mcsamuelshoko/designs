@@ -70,7 +70,7 @@ section {
         </div>
         <div class="h-[25vh] border-b flex justify-between p-8 relative bg-primary/30" :style="{ backgroundPosition: '0px -' + (3 * 20) + 'vh' }">
           <ul class="flex space-x-4 px-8">
-                <li><a target="_blank" href="#contact" title="Goto contact section" class="flex space-x-8 hover:bg-accent hover:p-2 transition-all hover:rounded-xl">
+                <li><a  href="#contact" title="Goto contact section" class="flex space-x-8 hover:bg-accent hover:p-2 transition-all hover:rounded-xl">
                     <img :src="emailIconUrl" alt="LinkedIn-icon" class="h-16 lg:h-32 invert ">
                     <img :src="dArrowIconUrl" alt="LinkedIn-icon" class="h-16 lg:h-32 invert">
                 </a>
