@@ -28,7 +28,7 @@ const rArrowIconUrl:string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org
         <div class="border-b grid grid-cols-2 p-8">
             <div>
                 <p class="text-2xl">
-                    Let&apos;s turn your big <b class="text-accent">ideas</b> into <br>
+                    Let&apos;s turn great <b class="text-accent">ideas</b> into <br>
                     something real <span class="inline-flex">
                         <img :src="rArrowIconUrl" alt="right arrow-icon" class="h-6 invert"/>
                     </span>
