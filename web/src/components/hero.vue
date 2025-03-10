@@ -55,31 +55,61 @@ section {
     <section id="heroLg" class="hidden md:block font-display relative h-[125vh] overflow-hidden">
       <div class="absolute top-0 left-0 w-full h-full" :style="{ backgroundImage: `url(${images[currentSlide]})` }">
         <div class="h-[25vh]   border-b flex justify-between p-8 relative bg-primary/30" :style="{ backgroundPosition: '0px -' + (0 * 20) + 'vh' }">
-          <p class="capitalize text-8xl lg:text-9xl font-bold items-center ">Mc Samuel</p>
+          <p class="capitalize text-7xl lg:text-9xl font-bold items-center ">Mc Samuel</p>
           <p class="capitalize text-3xl backdrop-blur-xl my-auto p-2 px-4 rounded-3xl">Brand Design</p>
         </div>
         <div class="h-[25vh]  border-b flex justify-between p-8 relative bg-primary/30" :style="{ backgroundPosition: '0px -' + (1 * 20) + 'vh' }">
           <p class="text-3xl backdrop-blur-xl my-auto p-2 px-4 rounded-3xl">UI/UX Design</p>
           <p class="capitalize text-3xl backdrop-blur-xl my-auto p-2 px-4 rounded-3xl">Web Design</p>
-          <p class="capitalize text-8xl lg:text-9xl font-bold ">Shoko</p>
+          <p class="capitalize text-7xl lg:text-9xl font-bold ">Shoko</p>
         </div>
         <div class="h-[25vh] border-b flex justify-between p-8 relative bg-primary/30" :style="{ backgroundPosition: '0px -' + (2 * 20) + 'vh' }">
-          <p class="capitalize text-8xl font-bold lg:text-9xl">Digital</p>
-          <p class="capitalize text-8xl font-bold lg:text-9xl">Graphic</p>
+          <p class="capitalize text-7xl font-bold lg:text-9xl">Digital</p>
+          <p class="capitalize text-7xl font-bold lg:text-9xl">Graphic</p>
           <p class="capitalize text-3xl backdrop-blur-xl my-auto p-2 px-4 rounded-3xl">Logo Identity</p>
         </div>
         <div class="h-[25vh] border-b flex justify-between p-8 relative bg-primary/30" :style="{ backgroundPosition: '0px -' + (3 * 20) + 'vh' }">
           <ul class="flex space-x-4 px-8">
                 <li><a  href="#contact" title="Goto contact section" class="flex space-x-8 hover:bg-accent hover:p-2 transition-all hover:rounded-xl">
-                    <img :src="emailIconUrl" alt="LinkedIn-icon" class="h-16 lg:h-32 invert ">
-                    <img :src="dArrowIconUrl" alt="LinkedIn-icon" class="h-16 lg:h-32 invert">
+                    <img :src="emailIconUrl" alt="LinkedIn-icon" class="h-16 md:h-24 lg:h-32 invert ">
+                    <img :src="dArrowIconUrl" alt="LinkedIn-icon" class="h-16 md:h-24 lg:h-32 invert">
                 </a>
                 </li>
           </ul>
-          <p class="capitalize text-8xl lg:text-9xl font-bold ">Designer</p>
+          <p class="capitalize text-7xl lg:text-9xl font-bold ">Designer</p>
         </div>
         <div class="h-[25vh] border-b flex justify-between p-8 relative bg-primary/30" :style="{ backgroundPosition: '0px -' + (4 * 20) + 'vh' }">
-          <p class="capitalize text-8xl font-bold "></p>
+          <p class="capitalize text-7xl font-bold "></p>
+        </div>
+      </div>
+    </section>
+    <section id="heroSm" class="md:hidden font-display relative h-[125vh] overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-full" :style="{ backgroundImage: `url(${images[currentSlide]})` }">
+        <div class="h-[25vh]   border-b flex flex-wrap justify-between p-8 relative bg-primary/30" :style="{ backgroundPosition: '0px -' + (0 * 20) + 'vh' }">
+          <p class="capitalize text-4xl font-bold items-center ">Mc&nbsp;Samuel</p>
+          <p class="capitalize text-4xl font-bold ">Shoko</p>
+        </div>
+        <div class="h-[25vh]  border-b flex flex-wrap justify-between p-8 relative bg-primary/30" :style="{ backgroundPosition: '0px -' + (1 * 20) + 'vh' }">
+          <p class="capitalize text-4xl font-bold">Digital</p>
+          <p class="capitalize text-4xl font-bold">Graphic Designer</p>
+        </div>
+        <div class="h-[25vh] border-b grid grid-cols-2 text-xl justify-between p-8 relative bg-primary/30" :style="{ backgroundPosition: '0px -' + (2 * 20) + 'vh' }">
+          <p class=" backdrop-blur-2xl my-auto p-2 px-4 rounded-3xl">UI/UX Design</p>
+          <p class="capitalize  backdrop-blur-2xl my-auto p-2 px-4 rounded-3xl">Web Design</p>
+          <p class="capitalize  backdrop-blur-2xl my-auto p-2 px-4 rounded-3xl">Brand Design</p>
+          <p class="capitalize backdrop-blur-2xl my-auto p-2 px-4 rounded-3xl">Logo Identity</p>
+        </div>
+        <div class="h-[25vh] border-b flex justify-between p-8 relative bg-primary/30" :style="{ backgroundPosition: '0px -' + (3 * 20) + 'vh' }">
+          <ul class="flex space-x-4 px-8">
+                <li><a  href="#contact" title="Goto contact section" class="flex space-x-8 hover:bg-accent hover:p-2 transition-all hover:rounded-xl">
+                    <img :src="emailIconUrl" alt="LinkedIn-icon" class="h-16 md:h-24 lg:h-32 invert ">
+                    <img :src="dArrowIconUrl" alt="LinkedIn-icon" class="h-16 md:h-24 lg:h-32 invert">
+                </a>
+                </li>
+          </ul>
+        </div>
+        <div class="h-[25vh] border-b flex justify-between p-8 relative bg-primary/30" :style="{ backgroundPosition: '0px -' + (4 * 20) + 'vh' }">
+          <p class="capitalize text-7xl font-bold "></p>
         </div>
       </div>
     </section>
