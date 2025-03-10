@@ -8,6 +8,8 @@ const githubIconUrl:string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org
 const linkTreeIconUrl:string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3C!-- Icon from Carbon by IBM - undefined --%3E%3Cpath fill='currentColor' d='M18.57 28C17.897 26.725 16 22.226 16 12v-.131l1.117.744A6.46 6.46 0 0 1 20 18h2a8.46 8.46 0 0 0-3.773-7.05L16.803 10h1.53a7.04 7.04 0 0 1 4.2 1.4l1.867 1.4l1.2-1.6l-1.867-1.4a9.06 9.06 0 0 0-5.4-1.8h-1.216A7.03 7.03 0 0 1 22 6h2V4h-2a9.04 9.04 0 0 0-7 3.364A9.04 9.04 0 0 0 8 4H6v2h2a7.03 7.03 0 0 1 4.883 2h-1.216a9.06 9.06 0 0 0-5.4 1.8L4.4 11.2l1.2 1.6l1.867-1.4a7.04 7.04 0 0 1 4.2-1.4h1.53l-1.423.95A8.46 8.46 0 0 0 8 18h2a6.46 6.46 0 0 1 2.883-5.387L14 11.87V12c0 8.944 1.412 13.765 2.361 16H2v2h28v-2Z'/%3E%3C/svg%3E";
 const instagramIconUrl:string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3C!-- Icon from Carbon by IBM - undefined --%3E%3Ccircle cx='22.406' cy='9.594' r='1.44' fill='currentColor'/%3E%3Cpath fill='currentColor' d='M16 9.838A6.162 6.162 0 1 0 22.162 16A6.16 6.16 0 0 0 16 9.838M16 20a4 4 0 1 1 4-4a4 4 0 0 1-4 4'/%3E%3Cpath fill='currentColor' d='M16 6.162c3.204 0 3.584.012 4.849.07a6.6 6.6 0 0 1 2.228.413a3.98 3.98 0 0 1 2.278 2.278a6.6 6.6 0 0 1 .413 2.228c.058 1.265.07 1.645.07 4.85s-.012 3.583-.07 4.848a6.6 6.6 0 0 1-.413 2.228a3.98 3.98 0 0 1-2.278 2.278a6.6 6.6 0 0 1-2.228.413c-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07a6.6 6.6 0 0 1-2.228-.413a3.98 3.98 0 0 1-2.278-2.278a6.6 6.6 0 0 1-.413-2.228c-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849a6.6 6.6 0 0 1 .413-2.228a3.98 3.98 0 0 1 2.278-2.278a6.6 6.6 0 0 1 2.228-.413c1.265-.058 1.645-.07 4.849-.07M16 4c-3.259 0-3.668.014-4.948.072a8.8 8.8 0 0 0-2.912.558a6.14 6.14 0 0 0-3.51 3.51a8.8 8.8 0 0 0-.558 2.913C4.014 12.333 4 12.74 4 16s.014 3.668.072 4.948a8.8 8.8 0 0 0 .558 2.912a6.14 6.14 0 0 0 3.51 3.51a8.8 8.8 0 0 0 2.913.558c1.28.058 1.688.072 4.947.072s3.668-.014 4.948-.072a8.8 8.8 0 0 0 2.913-.558a6.14 6.14 0 0 0 3.51-3.51a8.8 8.8 0 0 0 .557-2.913C27.986 19.667 28 19.26 28 16s-.014-3.668-.072-4.948a8.8 8.8 0 0 0-.558-2.912a6.14 6.14 0 0 0-3.51-3.51a8.8 8.8 0 0 0-2.913-.557C19.667 4.013 19.26 4 16 4'/%3E%3C/svg%3E";
 const rArrowIconUrl:string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3C!-- Icon from Carbon by IBM - undefined --%3E%3Cpath fill='currentColor' d='m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z'/%3E%3C/svg%3E";
+const dArrowIconUrl: string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3C!-- Icon from Carbon by IBM - undefined --%3E%3Cpath fill='currentColor' d='M24.59 16.59L17 24.17V4h-2v20.17l-7.59-7.58L6 18l10 10l10-10z'/%3E%3C/svg%3E";
+
 </script>
 
 <template>
@@ -25,16 +27,17 @@ const rArrowIconUrl:string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org
                 they solve problems and help you reach your goals.
             </p>
         </div>
-        <div class="border-b grid grid-cols-2 p-8">
+        <div class="border-b grid md:grid-cols-2 p-8">
             <div>
                 <p class="text-2xl">
                     Let&apos;s turn great <b class="text-accent">ideas</b> into <br>
                     something real <span class="inline-flex">
-                        <img :src="rArrowIconUrl" alt="right arrow-icon" class="h-6 invert"/>
+                        <img :src="rArrowIconUrl" alt="right arrow-icon" class="h-6 invert hidden md:block"/>
+                        <img :src="dArrowIconUrl" alt="right arrow-icon" class="h-6 invert md:hidden"/>
                     </span>
                 </p>
             </div>
-            <ul class="flex space-x-4 px-8">
+            <ul class="flex space-x-4 lg:px-8">
                 <li><a target="_blank" href="https://www.linkedin.com/in/mc-samuel-shoko-2483731b5" title="visit LinkedIn">
                     <img :src="linkedInUrl" alt="LinkedIn-icon" class="h-16 invert hover:bg-[#ffa800] hover:p-1 transition-all hover:rounded-xl">
                 </a>
