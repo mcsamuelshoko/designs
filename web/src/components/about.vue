@@ -24,7 +24,7 @@ const wordClass = (index: number) => {
 <template>
     <section id="about" class="border-b">
         <div class="border-x border-dashed md:mx-40 px-8 flex items-center  h-[75vh]">
-            <p class="text-6xl font-display p-8">
+            <p class="text-4xl md:text-6xl font-display p-8">
                 I take <span class="text-accent">ideas</span> and draw them with clear shapes and smart designs. <span
                     class="inline-flex relative top-4 animate-[ping_7s_infinite]"><img :src="`${baseUrl}/icons/star.svg`"
                         alt="star shape" class="h-16 -mb-4 animate-[spin_7s_infinite]  ease-in" /></span>
@@ -32,8 +32,8 @@ const wordClass = (index: number) => {
         </div>
     </section>
     <section id="skills">
-        <div class="border-b p-2 px-8">
-            <p class="text-6xl font-display transition-all">I make
+        <div class="border-b p-4 px-8">
+            <p class="text-4xl md:text-6xl font-display transition-all">I make
                 <span :class="wordClass(0)">websites, </span>
                 <span :class="wordClass(1)">apps, </span>
                 <span :class="wordClass(2)">branding, </span>
@@ -41,8 +41,8 @@ const wordClass = (index: number) => {
                 <span :class="wordClass(4)">ads </span>
             </p>
         </div>
-        <div class="border-b  p-2 px-8">
-            <p class="text-6xl font-display text-accent"><span class="text-black/0">I make websites,</span> that <span
+        <div class="border-b  p-4 px-8">
+            <p class="text-4xl md:text-6xl font-display text-accent"><span class="text-black/0 hidden lg:inline">I make websites,</span> that <span
                     class="text-white"> look good and</span> work great.</p>
         </div>
         <div class="border-b grid grid-cols-2 md:grid-cols-4">
@@ -79,8 +79,8 @@ const wordClass = (index: number) => {
         </div>
 
     </section>
-    <section id="likes" class="grid grid-cols-2 md:grid-cols-4 border-b">
-        <div class="md:col-span-3 border-r p-8 text-6xl h-[75vh] flex items-center">
+    <section id="likes" class="grid md:grid-cols-2 lg:grid-cols-4 border-b">
+        <div class="lg:col-span-3 md:border-r p-8 text-2xl md:text-4xl lg:text-6xl h-[30vh] md:h-[50vh] lg:h-[75vh] flex items-center">
             <div class="space-y-3">
                 <p class="">I love helping &mdash; <br></p>
                 <p class="bg-accent font-bold p-1 pr-4">new businesses grow.</p>
