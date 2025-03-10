@@ -14,16 +14,16 @@ const dArrowIconUrl: string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.or
 
 <template>
     <section id="contact" class="">
-        <div class="border-b grid md:grid-cols-2 text-2xl">
+        <div class="border-b grid md:grid-cols-2 md:text-2xl">
             <p class="md:border-r border-b md:border-b-0 p-8 md:py-16 lg:py-24">
                 Every pixel has a purpose in my work. <br>
-                I focus on clean designs that help <br>
-                your business grow and make <br>
+                I focus on clean designs that help <br class="hidden lg:block">
+                your business grow and make <br class="hidden lg:block">
                 customers happy.</p>
             <p class="p-8  md:py-16 lg:py-24">
                 I turn messy thoughts into sharp designs.<br>
-                Ideas get a clean look that grabs attention<br>
-                and works. My designs don't only look good &mdash; <br>
+                Ideas get a clean look that grabs attention<br class="hidden lg:block">
+                and works. My designs don't only look good &mdash; <br class="hidden lg:block">
                 they solve problems and help you reach your goals.
             </p>
         </div>
