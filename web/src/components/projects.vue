@@ -62,13 +62,13 @@ const toggle = (index: number) => {
 
 <template>
     <section id="work" class="border-b pt-8">
-        <div class="text-8xl p-8 flex space-x-8 lg:space-x-16 font-bold">
+        <div class="text-4xl md:text-6xl lg:text-8xl p-8 flex space-x-8 lg:space-x-16 font-bold">
             <p>See my work</p>
             <div>
                 <img :src="dArrowIconUrl" alt="right arrow-icon" class="h-24 bg-[#ffa800] invert" />
             </div>
         </div>
-        <ul class="uppercase font-bold grid grid-cols-3 font-display text-2xl pt-16">
+        <ul class="uppercase font-bold grid grid-cols-3 font-display md:text-xl lg:text-2xl pt-16">
             <li class="border-r h-16 flex flex-col justify-end px-8">Name</li>
             <li class="border-r h-16 flex flex-col justify-end px-8">Category</li>
             <li class=" h-16 flex flex-col justify-end px-8">Date</li>
@@ -81,7 +81,7 @@ const toggle = (index: number) => {
                 <button type="button"
                     class=" w-full hover:cursor-pointer hover:bg-white hover:text-accent transition-all"
                     @click="toggle(index)">
-                    <div class="grid grid-cols-3 items-center h-12 text-2xl">
+                    <div class="grid grid-cols-3 items-center min-h-12 md:text-xl lg:text-2xl">
                         <p class="pl-8 capitalize">{{ project.name }}</p>
                         <p class="pl-8 capitalize">{{ project.category }}</p>
                         <div class="flex">
@@ -101,11 +101,11 @@ const toggle = (index: number) => {
                             </div>
                         </div>
                         <div class="md:col-span-4 p-8">
-                            <p class=" text-2xl capitalize"> <span v-for="(tag, tIndex) in project.tags"
+                            <p class=" md:text-xl lg:text-2xl capitalize"> <span v-for="(tag, tIndex) in project.tags"
                                     :key="tIndex">{{ tag }}
                                     <span v-if="(project.tags.length - 1) != tIndex" class="opacity-50">&mdash; </span> </span></p>
                             <br>
-                            <p class=" text-2xl opacity-50">{{ project.description }}</p>
+                            <p class=" md:text-xl lg:text-2xl opacity-50">{{ project.description }}</p>
                             <br>
                             <div class="flex flex-wrap  space-y-4 space-x-8">
                                 <Button title="visit" target="blank" :url="project.openUrl" />
@@ -126,18 +126,18 @@ const toggle = (index: number) => {
         </div> -->
     </section>
     <section id="workBottom" class="border-b">
-        <ul class="uppercase font-bold grid grid-cols-3 font-display text-2xl  pb-16">
+        <ul class="uppercase font-bold grid grid-cols-3 font-display md:text-xl lg:text-2xl  pb-16">
             <li class="border-r h-16 flex flex-col items-start justify-end px-8">Name</li>
             <li class="border-r h-16 flex flex-col justify-end px-8">Category</li>
             <li class=" h-16 flex flex-col justify-end px-8">Date</li>
         </ul>
-        <div class="text-8xl p-8 flex space-x-8 lg:space-x-16 font-bold">
+        <div class="text-4xl md:text-6xl lg:text-8xl p-8 flex space-x-8 lg:space-x-16 font-bold">
             <p class="opacity-0">See my work</p>
             <div>
                 <img :src="dArrowIconUrl" alt="right arrow-icon" class="h-24 bg-[#ffa800] invert rotate-180" />
             </div>
         </div>
-        <ul class="uppercase font-bold grid grid-cols-3 font-display text-2xl">
+        <ul class="uppercase font-bold grid grid-cols-3 font-display md:text-xl lg:text-2xl">
             <li class="border-r h-16 flex flex-col justify-end px-8"><p class="opacity-0">Name</p></li>
             <li class="border-r h-16 flex flex-col justify-end px-8"><p class="opacity-0">Category</p></li>
             <li class=" h-16 flex flex-col justify-end px-8"><p class="opacity-0">Date</p></li>
