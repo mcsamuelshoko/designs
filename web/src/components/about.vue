@@ -65,9 +65,9 @@ const wordClass = (index: number) => {
             </div> -->
             <div class="md:col-span-3  md:border-r overflow-hidden">
 
-                <ul :class="wordClass(4)" class='flex space-x-2 justify-center items-center animate-[wiggle_15s_infinite] text-7xl font-marker'>
+                <ul :class="wordClass(4)" class='flex space-x-2 justify-center items-center animate-[wiggle_15s_infinite] text-4xl md:text-5xl lg:text-7xl font-marker'>
                     <!-- Loop through the items and display each one -->
-                    <li v-for="i in 19" :key="i" class="px-4">
+                    <li v-for="i in 19" :key="i" class="px-2 md:px-4">
                         <span >do&nbsp;great&nbsp;things&nbsp;* </span>
                     </li>
                 </ul>
