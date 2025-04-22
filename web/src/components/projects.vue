@@ -88,7 +88,7 @@ const toggle = (index: number) => {
                             <p class="pl-8">{{ project.date.split('-')[2] }} </p>
                             <div class="ml-[30%] ">
                                 <!-- Bind the icon dynamically based on the toggle state -->
-                                <img :src="icons[index]??plusLIconUrl" alt="accordion-toggle-icon" class="h-8 transition-all">
+                                <img :src="icons[index]??plusLIconUrl" alt="accordion-toggle-icon" class="h-8 transition-all invert-50">
                             </div>
                         </div>
                     </div>
@@ -121,12 +121,10 @@ const toggle = (index: number) => {
 
             </div>
         </div>
-        <!-- <div class="border-b">
-            <Playground />
-        </div> -->
+
     </section>
     <section id="workBottom" class="border-b">
-        <ul class="uppercase font-bold grid grid-cols-3 font-display md:text-xl lg:text-2xl  pb-16">
+        <ul class="uppercase font-bold grid grid-cols-3 font-display md:text-xl lg:text-2xl  pb-16 opacity-30">
             <li class="border-r h-16 flex flex-col items-start justify-end px-8">Name</li>
             <li class="border-r h-16 flex flex-col justify-end px-8">Category</li>
             <li class=" h-16 flex flex-col justify-end px-8">Date</li>
@@ -134,13 +132,8 @@ const toggle = (index: number) => {
         <div class="text-4xl md:text-6xl lg:text-8xl p-8 flex space-x-8 lg:space-x-16 font-bold">
             <p class="opacity-0">See my work</p>
             <div>
-                <img :src="dArrowIconUrl" alt="right arrow-icon" class="h-24 bg-[#ffa800] invert rotate-180" />
+                <img :src="dArrowIconUrl" alt="right arrow-icon" class="h-24 bg-[#ffa800] invert rotate-180 opacity-0" />
             </div>
         </div>
-        <ul class="uppercase font-bold grid grid-cols-3 font-display md:text-xl lg:text-2xl">
-            <li class="border-r h-16 flex flex-col justify-end px-8"><p class="opacity-0">Name</p></li>
-            <li class="border-r h-16 flex flex-col justify-end px-8"><p class="opacity-0">Category</p></li>
-            <li class=" h-16 flex flex-col justify-end px-8"><p class="opacity-0">Date</p></li>
-        </ul>
     </section>
 </template>
