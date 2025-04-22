@@ -10,29 +10,18 @@ const thumbsUpIconUrl= "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/
 // const baseUrl = Astro.site;
 const baseUrl = BASE_URL;
 ---
-<div class="min-h-[61.3vh] p-16 mb-32 space-y-8">
-    <div class="flex flex-wrap md:flex-nowrap space-y-4">
-        <span
-                class="inline-flex relative top-4 animate-[ping_7s_infinite]">
-            <img src={baseUrl+"/icons/star.svg"} alt="star shape" class="h-32 -mb-4 animate-[spin_5s_infinite]  ease-in" />
-        </span>
-        <p class="text-5xl md:text-7xl xl:text-9xl text-center font-display font-bold text-blue-50">Thanks for stopping by</p>
-        <img src={thumbsUpIconUrl} alt="thumbs up icon" class="hidden md:block h-24 md:h-32 lg:h-48 invert opacity-20">
-        <span
-            class="hidden md:inline-flex relative top-4 animate-[ping_4s_infinite]"><img src={baseUrl+"/icons/submark.svg"}
-                alt="submark icon" class="h-20 md:h-32 -mb-4 animate-[wiggle_5s_infinite]  ease-in" />
-        </span>
+<div class="min-h-[61.3vh]  my-32 space-y-8">
 
-    </div>
-    <div class="flex flex-wrap space-y-8 justify-center items-center">
-        <span
-            class="inline-flex   brightness-90	"><img src={baseUrl+"/images/maki-portrait.png"}
-            alt="my portrait" class="h-36 -mb-4  ease-in rounded-3xl opacity-90" />
-        </span>
-        <p class="text-xl md:text-3xl font-display text-blue-50 text-center px-8">I hope you have a Great day!</p>
-        <span
-        class="place-self-center">
-            <img src={coolFaceIconUrl} alt="cool face" class="h-32 -mb-4 animate-[wiggle_1s_infinite]  ease-in invert opacity-30" />
-        </span>
-    </div>
+    <section id="goodbye" class="grid md:grid-cols-2 lg:grid-cols-4 border-y">
+        <div class=" flex items-center">
+            <img src={baseUrl+"/images/maki-portrait.png"} alt="my portrait" class="h-full object-cover  ease-out opacity-90" />
+        </div>
+        <div class="lg:col-span-3 md:border-l p-8 text-2xl md:text-4xl lg:text-6xl h-[30vh] md:h-[50vh] lg:h-[75vh] flex items-center">
+            <div class="space-y-3">
+                <p class="">Thanks for stopping by &mdash; <br></p>
+                <p class="bg-accent font-bold p-1 md:pb-2.5 pr-4">I hope you have a great day.</p>
+            </div>
+        </div>
+    </section>
+
 </div>
