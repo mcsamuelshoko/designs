@@ -83,7 +83,7 @@ const wordClass = (index: number) => {
         <div class="lg:col-span-3 md:border-r p-8 text-2xl md:text-4xl lg:text-6xl h-[30vh] md:h-[50vh] lg:h-[75vh] flex items-center">
             <div class="space-y-3">
                 <p class="">I love helping &mdash; <br></p>
-                <p class="bg-accent font-bold p-1 pr-4">new businesses grow.</p>
+                <p class="bg-accent font-bold p-1 pr-4"> businesses grow.</p>
             </div>
         </div>
         <div class="p-8 flex items-center">
