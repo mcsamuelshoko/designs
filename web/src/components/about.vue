@@ -23,7 +23,7 @@ const wordClass = (index: number) => {
 
 <template>
     <section id="about" class="border-b">
-        <div class="md:border-x border-dashed md:mx-40 px-8 flex items-center  h-[75vh]">
+        <div class="md:border-x border-solid md:mx-40 px-8 flex items-center  h-[75vh]">
             <p class="text-4xl md:text-6xl font-display p-8">
                 I take <span class="text-accent">ideas</span> and draw them with clear shapes and smart designs. <span
                     class="inline-flex relative top-4 animate-[ping_7s_infinite]"><img :src="`${baseUrl}/icons/star.svg`"
