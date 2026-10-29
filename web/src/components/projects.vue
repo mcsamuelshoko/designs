@@ -62,13 +62,13 @@ const toggle = (index: number) => {
 
 <template>
     <section id="work" class="border-b pt-8">
-        <div class="text-4xl md:text-6xl lg:text-8xl p-8 flex space-x-8 lg:space-x-16 font-bold">
-            <p>See my work</p>
+        <div class="text-4xl md:text-6xl lg:text-8xl p-8 flex space-x-8 lg:space-x-16 font-bold container mx-auto">
+            <p class="uppercase">My work</p>
             <div>
                 <img :src="dArrowIconUrl" alt="right arrow-icon" class="h-24 bg-[#ffa800] invert" />
             </div>
         </div>
-        <ul class="uppercase font-bold grid grid-cols-3 font-display md:text-xl lg:text-2xl pt-16">
+        <ul class="uppercase font-bold grid grid-cols-3 font-display md:text-xl lg:text-2xl pt-16  container mx-auto">
             <li class="border-r h-16 flex flex-col justify-end px-8">Name</li>
             <li class="border-r h-16 flex flex-col justify-end px-8">Category</li>
             <li class=" h-16 flex flex-col justify-end px-8">Date</li>
@@ -81,7 +81,7 @@ const toggle = (index: number) => {
                 <button type="button"
                     class=" w-full hover:cursor-pointer hover:bg-white hover:text-accent transition-all"
                     @click="toggle(index)">
-                    <div class="grid grid-cols-3 items-center min-h-12 md:text-xl lg:text-2xl">
+                    <div class="grid grid-cols-3 items-center min-h-12 md:text-xl lg:text-2xl  container mx-auto">
                         <p class="pl-8 capitalize">{{ project.name }}</p>
                         <p class="pl-8 capitalize">{{ project.category }}</p>
                         <div class="flex">
@@ -124,7 +124,7 @@ const toggle = (index: number) => {
 
     </section>
     <section id="workBottom" class="border-b">
-        <ul class="uppercase font-bold grid grid-cols-3 font-display md:text-xl lg:text-2xl  pb-16 opacity-30">
+        <ul class="uppercase font-bold grid grid-cols-3 font-display md:text-xl lg:text-2xl  pb-16 opacity-30 container mx-auto">
             <li class="border-r h-16 flex flex-col items-start justify-end px-8">Name</li>
             <li class="border-r h-16 flex flex-col justify-end px-8">Category</li>
             <li class=" h-16 flex flex-col justify-end px-8">Date</li>

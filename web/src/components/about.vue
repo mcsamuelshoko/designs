@@ -24,16 +24,20 @@ const wordClass = (index: number) => {
 <template>
     <section id="about" class="border-b">
         <div class="md:border-x border-solid md:mx-40 px-8 flex items-center  h-[75vh]">
-            <p class="text-4xl md:text-6xl font-display p-8">
-                I take <span class="text-accent">ideas</span> and draw them with clear shapes and smart designs. <span
-                    class="inline-flex relative top-4 animate-[ping_7s_infinite]"><img :src="`${baseUrl}/icons/star.svg`"
-                        alt="star shape" class="h-16 -mb-4 animate-[spin_7s_infinite]  ease-in" /></span>
-            </p>
+            <div class=" p-8 container mx-auto">
+                <p class="text-4xl md:text-6xl font-display max-w-4xl mx-auto">
+                    I take <span class="text-accent font-medium">ideas</span> and draw them with clear shapes and smart designs. 
+                    <span class="inline-flex relative top-4 animate-[ping_7s_infinite]">
+                        <img :src="`${baseUrl}/icons/star.svg`" alt="star shape" class="h-16 -mb-4 animate-[spin_7s_infinite] ease-in" />
+                    </span>
+                </p>
+            </div>
+            
         </div>
     </section>
     <section id="skills">
         <div class="border-b p-4 px-8">
-            <p class="text-4xl md:text-6xl font-display transition-all">I make
+            <p class="text-4xl md:text-6xl font-display transition-all container mx-auto max-w-4xl p-4">I make
                 <span :class="wordClass(0)">websites, </span>
                 <span :class="wordClass(1)">apps, </span>
                 <span :class="wordClass(2)">branding, </span>
@@ -42,21 +46,21 @@ const wordClass = (index: number) => {
             </p>
         </div>
         <div class="border-b  p-4 px-8">
-            <p class="text-4xl md:text-6xl font-display text-accent"><span class="text-black/0 hidden lg:inline">I make websites,</span> that <span
+            <p class="text-4xl md:text-6xl font-display text-accent  container mx-auto max-w-4xl p-4"><span class="text-black/0 hidden lg:inline">I make websites,</span> that <span
                     class="text-white"> look good and</span> work great.</p>
         </div>
         <div class="border-b grid grid-cols-2 md:grid-cols-4">
             <div class="flex justify-center items-center border-r border-b md:border-b-0">
-                <img :class="wordClass(0)" :src="`${baseUrl}/icons/websites-form.svg`" alt="star shape" class="h-64 p-8 ease-in " />
+                <img :class="wordClass(0)" :src="`${baseUrl}/icons/websites-form.svg`" alt="star shape" class="min-h-64 p-8 ease-in " />
             </div>
             <div class="flex justify-center items-center md:border-r border-b md:border-b-0">
-                <img :class="wordClass(1)" :src="`${baseUrl}/icons/apps-form.svg`" alt="star shape" class="h-64 p-8 ease-in " />
+                <img :class="wordClass(1)" :src="`${baseUrl}/icons/apps-form.svg`" alt="star shape" class="min-h-64 p-8 ease-in " />
             </div>
             <div class="flex justify-center items-center border-r">
-                <img :class="wordClass(2)" :src="`${baseUrl}/icons/branding-form.svg`" alt="star shape" class="h-64 p-8 ease-in " />
+                <img :class="wordClass(2)" :src="`${baseUrl}/icons/branding-form.svg`" alt="star shape" class="min-h-64 p-8 ease-in " />
             </div>
             <div class="flex justify-center items-center">
-                <img :class="wordClass(3)" :src="`${baseUrl}/icons/logo-form.svg`" alt="star shape" class="h-64 p-8 ease-in " />
+                <img :class="wordClass(3)" :src="`${baseUrl}/icons/logo-form.svg`" alt="star shape" class="min-h-64 p-8 ease-in " />
             </div>
         </div>
         <div class="border-b grid grid-cols-1 md:grid-cols-4 h-16">
@@ -81,7 +85,7 @@ const wordClass = (index: number) => {
     </section>
     <section id="likes" class="grid md:grid-cols-2 lg:grid-cols-4 border-b">
         <div class="lg:col-span-3 md:border-r p-8 text-2xl md:text-4xl lg:text-6xl h-[30vh] md:h-[50vh] lg:h-[75vh] flex items-center">
-            <div class="space-y-3">
+            <div class="space-y-3  container mx-auto max-w-3xl">
                 <p class="">I love helping &mdash; <br></p>
                 <p class="bg-accent font-bold p-1 pr-4"> businesses grow.</p>
             </div>

@@ -16,21 +16,27 @@ const dArrowIconUrl: string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.or
 <template>
     <section id="contact" class="">
         <div class="border-b grid md:grid-cols-2 md:text-2xl">
-            <p class="md:border-r border-b md:border-b-0 p-8 md:py-16 lg:py-24">
-                Every pixel has a purpose in my work. <br>
-                I focus on clean designs that help <br class="hidden lg:block">
-                your business grow and make <br class="hidden lg:block">
-                customers happy.</p>
-            <p class="p-8  md:py-16 lg:py-24">
-                I turn messy thoughts into sharp designs.<br>
-                Ideas get a clean look that grabs attention<br class="hidden lg:block">
-                and works. My designs don't only look good &mdash; <br class="hidden lg:block">
-                they solve problems and help you reach your goals.
-            </p>
+            <div>
+                <p class="md:border-r border-b md:border-b-0 p-8 md:py-16 lg:py-24  mx-auto max-w-3xl">
+                    Every strategic decision has a purpose in my work. <br>
+                    I focus on clean designs that help <br class="hidden lg:block">
+                    your business grow and make <br class="hidden lg:block">
+                    customers happy.
+                </p>
+            </div>
+            <div>
+                <p class="p-8  md:py-16 lg:py-24  mx-auto max-w-3xl">
+                    I turn messy thoughts into sharp designs.<br>
+                    Ideas get a clean look that grabs attention<br class="hidden lg:block">
+                    and works. My designs don't only look good &mdash; <br class="hidden lg:block">
+                    they solve problems and help you reach your goals.
+                </p>
+            </div>
+            
         </div>
         <div class="border-b grid md:grid-cols-2 p-8">
-            <div>
-                <p class="text-2xl">
+            <div class="flex justify-end">
+                <p class="text-2xl    max-w-xl p-4">
                     Let&apos;s turn great <b class="text-accent">ideas</b> into <br>
                     something real <span class="inline-flex">
                         <img :src="rArrowIconUrl" alt="right arrow-icon" class="h-6 invert hidden md:block"/>
@@ -38,7 +44,7 @@ const dArrowIconUrl: string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.or
                     </span>
                 </p>
             </div>
-            <ul class="flex space-x-4 lg:px-8">
+            <ul class="flex items-center space-x-4 lg:px-8">
                 <li><a target="_blank" href="https://www.linkedin.com/in/mc-samuel-shoko-2483731b5" title="visit LinkedIn">
                     <img :src="linkedInUrl" alt="LinkedIn-icon" class="h-16 invert hover:bg-[#ffa800] hover:p-1 transition-all hover:rounded-xl">
                 </a>
@@ -51,15 +57,15 @@ const dArrowIconUrl: string = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.or
                 </a>
 
                 </li>
-                <li><a target="_blank" href="https://gitlab.com/mcsamuelshoko" title="Visit Gitlab">
+                <!-- <li><a target="_blank" href="https://gitlab.com/mcsamuelshoko" title="Visit Gitlab">
                     <img :src="gitlabIconUrl" alt="gitlab-icon" class="h-16 invert hover:bg-[#ffa800] hover:p-1 transition-all hover:rounded-xl">
                 </a></li>
                 <li><a target="_blank" href="https://github.com/mcsamuelshoko" title="Visit Github">
                     <img :src="githubIconUrl" alt="github-icon" class="h-16 invert hover:bg-[#ffa800] hover:p-1 transition-all hover:rounded-xl">
-                </a></li>
-                <li><a href="https://instagram.com/mcsamuelshoko" title="Visit Instagram">
+                </a></li> -->
+                <!-- <li><a href="https://instagram.com/mcsamuelshoko" title="Visit Instagram">
                     <img :src="instagramIconUrl" alt="github-icon" class="h-16 invert hover:bg-[#ffa800] hover:p-1 transition-all hover:rounded-xl">
-                </a></li>
+                </a></li> -->
                 <li><a target="_blank" href="https://linktr.ee/mcsamuelshoko" title="visit Linktree profile">
                     <img :src="linkTreeIconUrl" alt="github-icon" class="h-16 invert hover:bg-[#ffa800] hover:p-1 transition-all hover:rounded-xl">
                 </a></li>
