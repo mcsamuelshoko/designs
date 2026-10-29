@@ -16,16 +16,16 @@ const currentYear = new Date().getFullYear();
             <div class="flex flex-col">
                 <p class="uppercase bg-primary px-4 pt-8 pb-2 font-display text-2xl">Contact</p>
                 <ul class="flex-1 p-4  lg:border-r lg:border-solid border-white  space-y-1 uppercase">
-                    <li><a target="_blank" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://www.linkedin.com/in/mc-samuel-shoko-2483731b5"
+                    <li><a target="_blank" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://www.linkedin.com/in/mc-samuel-shoko-2483731b5"
                             title="visit LinkedIn">Linkedin</a></li>
-                    <li><a target="_blank" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://behance.com/mcsamuelshoko" title="Visit Behance">Behance</a></li>
-                    <li><a target="_blank" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://dribbble.com/mcsamuelshoko" title="Visit Github">Dribble</a></li>
-                    <li><a target="_blank" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://twitter.com/mcsamuelshoko" title="Visit X(Twitter)">Twitter</a></li>
-                    <li><a target="_blank" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://discord.com/users/generalseven" title="Visit Discord">Discord</a></li>
-                    <li><a target="_blank" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://gitlab.com/mcsamuelshoko" title="Visit Gitlab">Gitlab</a></li>
-                    <li><a target="_blank" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://github.com/mcsamuelshoko" title="Visit Github">Github</a></li>
-                    <li><a target="_blank" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://instagram.com/mcsamuelshoko" title="Visit Instagram">Instagram</a></li>
-                    <li><a target="_blank" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://linktr.ee/mcsamuelshoko" title="visit Linktree profile">Linktree</a></li>
+                    <li><a target="_blank" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://behance.com/mcsamuelshoko" title="Visit Behance">Behance</a></li>
+                    <li><a target="_blank" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://dribbble.com/mcsamuelshoko" title="Visit Github">Dribble</a></li>
+                    <li><a target="_blank" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://twitter.com/mcsamuelshoko" title="Visit X(Twitter)">Twitter</a></li>
+                    <li><a target="_blank" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://discord.com/users/generalseven" title="Visit Discord">Discord</a></li>
+                    <li><a target="_blank" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://gitlab.com/mcsamuelshoko" title="Visit Gitlab">Gitlab</a></li>
+                    <li><a target="_blank" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://github.com/mcsamuelshoko" title="Visit Github">Github</a></li>
+                    <li><a target="_blank" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://instagram.com/mcsamuelshoko" title="Visit Instagram">Instagram</a></li>
+                    <li><a target="_blank" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl" href="https://linktr.ee/mcsamuelshoko" title="visit Linktree profile">Linktree</a></li>
                 </ul>
 
             </div>
@@ -42,19 +42,22 @@ const currentYear = new Date().getFullYear();
             <div class="flex flex-col">
                 <p class="uppercase bg-primary px-4 pt-8 pb-2 font-display text-2xl">Website stack</p>
                 <ul class="flex-1 flex flex-col p-4 space-y-1">
-                    <li><a href="https://astro.build/" target="_blank" title="visit Astro" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl">Astro</a>
+                    <li><a href="https://astro.build/" target="_blank" title="visit Astro" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl">Astro</a>
                     </li>
-                    <li><a href="https://vuejs.org/" target="_blank" title="Visit Vuejs" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl">Vue.js</a></li>
-                    <li><a href="https://tailwindcss.com/" target="_blank" title="visit Tailwind Css" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl">Tailwind Css</a></li>
+                    <li><a href="https://vuejs.org/" target="_blank" title="Visit Vuejs" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl">Vue.js</a></li>
+                    <li><a href="https://tailwindcss.com/" target="_blank" title="visit Tailwind Css" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl">Tailwind Css</a></li>
                     <li class="h-4"></li>
-                    <li><a href="https://html.com/" target="_blank" title="Visit Html5" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl">Html5</a></li>
-                    <li><a href="https://www.typescriptlang.org/" target="_blank" title="Visit Typescript" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl">Typescript</a></li>
-                    <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank" title="visit Css" class="hover:bg-black transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl">Css</a></li>
+                    <li><a href="https://html.com/" target="_blank" title="Visit Html5" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl">Html5</a></li>
+                    <li><a href="https://www.typescriptlang.org/" target="_blank" title="Visit Typescript" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl">Typescript</a></li>
+                    <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank" title="visit Css" class="hover:bg-black hover:shadow-inner hover:shadow-white/20 transition-all  hover:no-underline p-1 hover:px-4 hover:rounded-4xl">Css</a></li>
                 </ul>
             </div>
         </div>
-        <div class="flex justify-center items-center h-12 font-display text-2xl">
+        <div class="flex justify-center items-center h-12 font-display text-2xl  border-b">
             <p class="uppercase">&copy; All rights reserved &mdash; {{ currentYear }}</p>
+        </div>
+        <div class="p-4 md:p-8">
+            <p class="mx-auto font-extrabold text-6xl md:text-9xl uppercase text-center text-accent-50 inset-shadow-zinc-300">Mc Samuel Shoko</p>
         </div>
     </footer>
 </template>

@@ -14,7 +14,7 @@ const openTarget = (s: "blank" | "self" | undefined) => (s == "blank" ? "_blank"
 </script>
 <template>
     <a :href="url" :target="openTarget(target)">
-        <button class="rounded-full uppercase bg-blue-700 p-1 px-8 text-xl  hover:opacity-80 hover:cursor-pointer"
+        <button class="rounded-full uppercase bg-blue-700 p-1 px-8 text-xl  hover:opacity-80 hover:cursor-pointer shadow-inner shadow-white/20"
             type="button">{{ title }}</button>
     </a>
 </template>
