@@ -12,16 +12,19 @@ const baseUrl = BASE_URL;
 ---
 <div class="min-h-[61.3vh]  my-32 space-y-8">
 
-    <section id="goodbye" class="grid md:grid-cols-2 lg:grid-cols-4 border-y">
-        <div class=" flex items-center">
-            <img src={baseUrl+"/images/maki-portrait.png"} alt="my portrait" class="h-full object-cover  ease-out opacity-90" />
-        </div>
-        <div class="lg:col-span-3 md:border-l p-8 text-2xl md:text-4xl lg:text-6xl h-[30vh] md:h-[50vh] lg:h-[75vh] flex items-center">
-            <div class="space-y-3">
-                <p class="">Thanks for stopping by &mdash; <br></p>
-                <p class="bg-accent font-bold p-1 md:pb-2.5 pr-4">I hope you have a great day.</p>
+    <section id="goodbye" class=" border-y p-8">
+        <div class="container mx-auto flex justify-center flex-wrap md:grid-cols-2 lg:grid-cols-4">
+            <div class=" flex items-center">
+                <img src={baseUrl+"/images/maki-portrait.png"} alt="my portrait" class="w-full   h-[30vh] md:h-[50vh]  object-cover  ease-out opacity-90 transition-all  shadow-inner shadow-white/40 rounded-4xl border-8 border-white/20" />
+            </div>
+            <div class="lg:col-span-2 p-8 text-2xl md:text-4xl flex items-center">
+                <div class="space-y-3 max-w-4xl">
+                    <p class="">Thanks for stopping by&nbsp;&mdash; <br></p>
+                    <p class="bg-accent shadow-inner shadow-white/20 font-bold p-2 md:pb-4 pr-8">I hope you have a great day.</p>
+                </div>
             </div>
         </div>
     </section>
+
 
 </div>
